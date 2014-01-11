@@ -2,44 +2,112 @@
 <html lang="en">
     <head>
     
-        <title>Newsday 1s/0s</title>
+        <title>The Newsday Data/Investigations Blog</title>
         
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
         
         <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:700,400,300' rel='stylesheet' type='text/css'>
         <link href='http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
         
         <link href="http://data.newsday.com/_common/css/bootheader.css" rel="stylesheet">
         <link href="http://data.newsday.com/_common/css/simple-share.css" rel="stylesheet">
+        <link href="style.css" rel="stylesheet">
         
         <script src="http://data.newsday.com/_common/js/libs/dropdown.js"></script>
         <script src="http://data.newsday.com/_common/js/libs/simple-share.js"></script>
         
-        <style type="text/css">
-            body { background-color: #bbb; }
-            
-            .bigtxt {
-                font-family: 'Roboto Condensed', serif;
-                font-size: 150px; font-weight: 900;
-                width: 100%; text-align: center;
-                margin: 15% auto; color: #222;
-                text-shadow: 2px 2px #ccf;
-                line-height: 140px;
-            }
-        </style>
         
     </head>
         
     <body>
         <a href="http://www.newsday.com" name="name" id="logo"><img src="http://data.newsday.com/_common/images/newsday-slim-logo.png"></a>
-        <div id="header" class="fadeIt">
-            <div class="inner">
-                <span class="nav"></span>
+            <div id="header" class="fadeIt">
+                <div class="inner">
+                    <strong>Data/Investigations Blog</strong>
+                    <span class="nav"></span>
+                </div>
             </div>
-        </div>
         </a>
         
-        <div class="bigtxt">Coming <br> Soon</div>
-        
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 col-md-9 pull-right">
+                    <div class="row">
+
+                    <!-- block # -->
+                    <div class="col-sm-12 post">
+<div class="hed">
+    <h1 class='bighed'>Meet CheckUp.</h1>
+
+    <div class="col-sm-7 pull-right screenshot">
+        <a class="hidden-xs" href="http://data.newsday.com/long-island/crime/law-enforcement-reform/"><img class="img img-responsive" src="img/checkup-home-long.png" target="_blank"></a>
+    </div>
+
+    <h2 class='subhed top-subhed'>Our open-source tool to survey politicians. <br class="visible-xs"> <aside>(Take one home today!)</aside></h2>
+    <h4 class='subhed bottom-subhed'></h4>
+</div>
+
+<div class="infobar">
+    <span class='by'>By MATT CLARK and ADAM PLAYFORD</span> <br>
+    <span class='date'>Published: Jan. 10, 2013
+</span>
+</div><p>Large parts of our recent investigation into police misconduct focused on inaction by Long Island’s elected officials. We wanted to hear from them all, and to push them to take a position on the issues we were reporting.</p>
+
+<p>Our solution: An online survey and an interactive to share the results. We sent 83 politicians the conclusions of our reporting, and asked them to answer “yes,” “no” or “no comment” to a handful of multiple-choice questions specific to the powers they have, along with unlimited space to write a longer response. We put it all online, whether they answered or not, along with the campaign contributions they’d received from law enforcement unions, their contact info and a tweet-at-them button.</p>
+
+<p>That also left us with some cool new reusable software, which we’re happy to announce that we’re releasing to the public under the MIT License as Newsday’s first open-source project. That means you can set up your own version of our software to ask your politicians questions. You can track their positions over time, possibly leading to more stories. We’re giving away both the surveying software and the software to visualize the results. The code’s on Github. More on that below.</p>
+
+<p>We also got to play with some nifty technology and learned a few new tricks, which we’re excited to tell you about. [Skip to the nerdy stuff!]<br /></p><h3>Conducting the survey</h3><p>As we finalized our conclusions, we drew up a handful of questions for each type of politician in our survey. We included the governor, attorney general, Long Island’s delegation in the state legislature, and our local counties’ executives, district attorneys and lawmakers — all officials who have power or influence over the areas of law we were writing about.</p>
+
+<p>The hardest part of the survey was making sure everyone received it. We planned on publishing the names of every politician who didn’t answer, so we had to be sure. We started with a certified, return-receipt letter to each official’s district office. That way, we would receive back a card from the U.S. Postal Service with a signature of an official staff member who accepted the letter. We then emailed the same letter to each politician. Finally, we called them all, in some cases repeatedly, till someone in their office confirmed that the letter was received. Each letter contained a link to the politician’s unique survey form on our site.</p>
+
+<p>A staff member of one senior state lawmaker told us her boss didn’t receive the mailed letter, doesn’t have an email address and would have to obtain Internet access. Four times she was given the web address of the form over the phone, but later told us she couldn’t access it, saying she’d written it down wrong. Thankfully, we had a return-receipt card with one of her staff members’ signature on it.</p>
+
+<p>CheckUp helped us track the entire process. It showed each official’s status in our survey: whether they had been contacted, whether they had confirmed receipt over the phone, whether they had visited the form page (and how many times), whether they had submitted the survey and whether their answers were emailed to them for confirmation. Reporters administering the survey could immediately see which official they needed to contact next.<br /></p><div class="col-xs-8 col-sm-4">
+    <img class="img img-responsive img-thumbnail" src="img/cover-survey.png">
+</div><p>Some lawmakers expressed displeasure that the system forced them to answer questions with a “yes” or “no.” Many decided to ignore the survey altogether. Others chose to “no comment” the specific questions but provided an explanation. Some Suffolk legislators said the county attorney told them they couldn’t comment because of ongoing litigation. Newsday’s follow-up cover story, which focused on the results of the survey, quoted the Suffolk legislature’s former counsel saying that excuse made no sense.<br /></p><h3>I’m sold. Where’s my CheckUp?</h3><p>CheckUp is a Django app that bakes to flat files for publication. If that sounds like Klingon to you, sorry, but that probably means you can’t have one right now. (We know that’s not great — it’s a hard problem, but we’re working on it.)</p>
+
+<p>If you know exactly what we mean, the code lives in GitHub and limited deployment notes (a work in progress) can be found there. <br /></p><h3>For Nerds’ Eyes Only</h3><p>We had a tight deadline for this project — just a few weeks — and were also working on our story and administering the survey. Still, we had time to try a few new tricks, which we wanted to point out:<br /></p><ul><li><strong>Flat-file baking.</strong> We decided to administer the site from an Amazon EC2 server, and then deploy it as a series of flat-files on our existing infrastructure. With lots of help from the LA Times’ django_bakery, that wasn’t too hard, and it saved us substantial time on deadline by freeing us from worrying about optimization or database load. At this time, we do not recommend using CheckUp to generate pages dynamically in production; the site’s code assumes it will be baked or otherwise cached.</li>
+<li><strong>Making a flat site feel 3D with HTML5.</strong> We didn’t want that technical limitation to stop us from making the site feel interactive. We wanted users to be able to skip from politicians to politician with smooth, seamless transitions. In browsers that support it, CheckUp uses css3 transitions, HTML5’s event history and old-fashioned AJAX requests to make multiple webpages feel like one. A thin Javascript layer catches click events and grabs the next page from the server with AJAX, while animating the old content off and the new content on. The homepage is entirely Javascript driven, built with Isotope (we bought a license) and a custom jQuery plugin we wrote that ingests a baked json file and creates the three-column visualization.</li>
+<li><strong>Paranoia.</strong> We spent a lot of time making sure that each lawmaker got the right survey link, and we didn’t want that work to go to waste because sloppy coding made it possible for someone to reverse-engineer the link. To prevent that we built security measures into the site, including logging survey views, generating long random URLs, and throttling requests to ensure that it would be almost impossible for an attacker to start with one survey link and then find the others. During the survey period, we also configured the server to send reporters on our I-Team e-mailed updates about every error, warning or 404. These efforts proved unnecessary, but we plan to continue using this software after releasing the code, and we wanted to leave nothing to chance.</li>
+</ul><h3>Endnotes:
+</h3><ul><li>CheckUp does not fully support IE8. It is fully responsive and should work well on mobile devices.</li>
+<li>Though the software is mostly reusable, we haven’t yet done a second survey with it. If you’re looking to use it, and it’s not flexible in a way that it could be, let us know, either on GitHub or via e-mail [<a href="mailto:adam.playford@newsday.com">adam.playford@newsday.com</a> and <a href="mailto:matt.clark@newsday.com">matt.clark@newsday.com</a>].
+</li>
+<li>We tip our hats to The LA Times Data Desk for making the awesome <a href="http://github.com/datadesk/django-bakery">django-bakery</a> library and to ProPublica’s Al Shaw, whose <a href="http://projects.propublica.org/sopa/">SOPA Opera</a> app was an obvious inspiration.</li>
+<li>We had a lot of help from a lot of awesome libraries, including underscore.js, jQuery, and jQuery Waypoints. Many icons used throughout the site were placed in the public domain on the excellent thenounproject.com [sources].</li>
+</ul><h3>Credits</h3><p>The CheckUp surveying software was created by <a href="http://twitter.com/MattTheJourno">Matt Clark</a>, and the front-end visualization by <a href="http://twitter.com/adamplayford">Adam Playford</a>, two reporters on Newsday’s investigations team. Newsday.com Long Island editor <a href="http://twitter.com/ErinGeismar">Erin Geismar</a> produced and managed the project, and designer Ron Griffo pitched in.</p>
+
+<p>The police oversight survey was conducted by reporters Clark, Playford and Will Van Sant, with the help of Geismar and database editor <a href="http://twitter.com/TimothyBHealy">Tim Healy</a>. The project was edited and supervised by Director of Investigations Matthew Doig.</p></div>
+                    <!-- /block # -->
+
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 sidebar pull-left">
+                    <div class="row">
+                        <div class="col-md-11 col-md-push-1">
+                            <div class="list-group">
+                                <div class="list-group-item">
+                                    <h4>Newsday Data / Investigations</h4>
+                                    <small><p>
+                                        We're a group of data journalists, investigative reporters and web developers at Newsday. We look for interesting ways to use technology to find and tell news stories.
+                                    </p></small>
+                                </div>
+                                <a class="list-group-item" href="http://data.newsday.com/long-island/photo-splash/?id=38">
+                                    <h4><small>Project</small> <br> Police misconduct on Long Island</h4>
+                                </a>
+                                <a class="list-group-item" href="http://github.com/newsday">
+                                    <h4><small>Our code is on</small> Github</h4>
+                                </a>
+                                <a class="list-group-item" href="http://www.newsday.com">
+                                    <h4>newsday.com</h4>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </body>
 </html>

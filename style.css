@@ -1,0 +1,46 @@
+body {
+    margin-top: 48px;
+}
+
+h1, h2, h3, h4, h5, h6, strong {
+    font-family: 'Roboto Condensed', serif;
+    font-weight: 700;
+}
+strong { font-size: 19px; }
+
+h1.bighed {
+    font-size: 80px;
+}
+
+.hed .screenshot {
+    margin-top: 45px;
+}
+
+.subhed aside {
+    display: inline; font-weight: 400; font-size: 22px;
+}
+
+.infobar {
+    margin: 20px 0;
+}
+
+.post h3 {
+    margin-top: 40px;
+}
+
+.post p, .post li {
+    font-size: 16px; line-height: 1.9em;
+}
+
+.post li {
+    margin-bottom: 15px; list-style-type: square;
+}
+
+
+.sidebar {
+    margin-top: 15%;
+}
+.sidebar p {
+    color: #aaa;
+    line-height: 13px;
+}
